@@ -4,6 +4,7 @@ const getNavUl = document.querySelector(".main-nav__ul");
 const getNavLis = document.querySelectorAll(".list-item");
 const body = document.body;
 const colorName = document.getElementById("color-name");
+const defaultText = document.getElementById("color-name").innerHTML;
 
 
 toggleNav.addEventListener("click", function() {
