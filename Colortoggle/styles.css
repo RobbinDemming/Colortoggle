@@ -21,7 +21,6 @@
   padding: 2px;
   border-bottom-right-radius: 10px;
   position: absolute;
-  margin-top: -5px;
   width: 150px;
   transition: all;
   transition-duration: 500ms;
@@ -34,24 +33,27 @@
   display: flex;
   align-items: center;
   font-size: 1.3em;
+}
+.main-nav__ul li span:hover {
+  text-decoration: underline;
   cursor: pointer;
 }
 .main-nav__ul input {
   margin-right: 10px;
 }
-.main-nav__ul #li-home {
+.main-nav__ul #Home {
   background-color: lightgray;
 }
-.main-nav__ul #li-red {
+.main-nav__ul #Red {
   background-color: red;
 }
-.main-nav__ul #li-orange {
+.main-nav__ul #Orange {
   background-color: orange;
 }
-.main-nav__ul #li-purple {
+.main-nav__ul #Purple {
   background-color: purple;
 }
-.main-nav__ul #li-green {
+.main-nav__ul #Green {
   background-color: green;
   border-bottom-right-radius: 10px;
 }
@@ -65,7 +67,23 @@
 }
 
 .show-menu {
-  transform: translateY(90px);
+  transform: translateY(95px);
+}
+
+.red-background {
+  background-color: red;
+}
+
+.orange-background {
+  background-color: orange;
+}
+
+.purple-background {
+  background-color: purple;
+}
+
+.green-background {
+  background-color: green;
 }
 
 * {

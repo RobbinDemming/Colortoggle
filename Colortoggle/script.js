@@ -1,64 +1,49 @@
 const mainNav = document.querySelector(".main-nav");
 const toggleNav = document.querySelector(".main-nav__btn");
 const getNavUl = document.querySelector(".main-nav__ul");
-const getNavLis = document.querySelectorAll(".list-item");
 const body = document.body;
 const colorName = document.getElementById("color-name");
-const defaultText = document.getElementById("color-name").innerHTML;
+const getNavSpan = document.querySelectorAll("span");
+const getNavInput = document.querySelectorAll("input");
+const homeLi = document.getElementById("Home");
 
+// HIERONDER STAAT EEN FUNTIE VOOR HET TOGGELEN VAN HET MENU ALS JE OP HET HAMBURGER ICOON KLIKT.
 
-toggleNav.addEventListener("click", function() {
+toggleNav.addEventListener("click", () => {
     getNavUl.classList.toggle("show-menu");
 });
 
 // HIERONDER STAAT EEN FUNCTIE OM HET MENU TE LATEN VERDWIJNEN ALS ER BUITEN HET MENU WORD GEKLIKT.
 
-document.addEventListener("click", function(e){
-    if (e.target !== toggleNav && !toggleNav.contains(e.target)) {
+document.addEventListener("click", (e) => {
+    if (e.target !== mainNav && !mainNav.contains(e.target)) {
         getNavUl.classList.remove("show-menu");
     }
 
 });
 
-// HIERONDER GEBRUIK IK EEN EVENTLISTENTER MET "CHANGE" IPV "CLICK" OM HET MENU TE LATEN VERDWIJNEN, AANGEZIEN "CLICK" BLIJKBAAR NIET WERKT OMDAT ER LABELS OM DE LISTELEMENTEN ZITTEN VOOR DE RADIO BUTTONS.
+// HIERONDER STAAN 2 FUNCTIES VOOR HET VERANDEREN VAN DE ACHTERGRONDKLEUR EN INNERHTML ALS JE OP DE MENUTEKST OF RADIOBUTTONS KLIKT.
 
-getNavLis.forEach(item => {
-    item.addEventListener("change", function() {
+getNavSpan.forEach(span => {
+    span.addEventListener("click", () => {
         getNavUl.classList.remove("show-menu");
+        colorName.innerHTML = span.parentElement.parentElement.id;
+        body.style.backgroundColor = span.parentElement.parentElement.id;
     });
 });
 
-// DE ACHTERGRONDKLEUR & HTML WIJZIGEN WERKT WEL GEWOON MET EEN EVENTLISTENER MET "CLICK".
+getNavInput.forEach(input => {
+    input.addEventListener("click", () => {
+        getNavUl.classList.remove("show-menu");
+        colorName.innerHTML = input.parentElement.parentElement.id;
+        body.style.backgroundColor = input.parentElement.parentElement.id;
 
-getNavLis[0].addEventListener("click", function(){
-    body.style.backgroundColor = "lightgrey";
-    colorName.innerHTML = defaultText;
+    });
 });
 
-getNavLis[1].addEventListener("click", function(){
-    body.style.backgroundColor = "red";
-    colorName.innerHTML = "Red"
+// HIERONDER STAAT EEN APARTE EVENTLISTENER VOOR HET HOME LISTELEMENT OMDAT IK DE ID "HOME" NIET DIRECT KAN GEBRUIKEN ALS ACHTERGRONDKLEUR.
 
+homeLi.addEventListener("click", () => {
+    body.style.backgroundColor = "lightgray";
 });
-
-getNavLis[2].addEventListener("click", function(){
-    body.style.backgroundColor = "orange";
-    colorName.innerHTML = "Orange"
-
-});
-
-getNavLis[3].addEventListener("click", function(){
-    body.style.backgroundColor = "purple";
-    colorName.innerHTML = "Purple"
-
-});
-
-getNavLis[4].addEventListener("click", function(){
-    body.style.backgroundColor = "green";
-    colorName.innerHTML = "Green"
-
-});
-
-
-
 
