@@ -12,8 +12,14 @@
         background-size: 50%;
         background-position: center;
         background-color: lightgray;
-        border-bottom-right-radius: 10px;
+        border-bottom-right-radius: 5px;
         cursor: pointer;
+        &:hover {
+          background-size: 52%;
+        }
+        &:active {
+          background-size: 48%;
+        }  
     }    
     &__ul {
       background-color: lightgrey;
@@ -54,13 +60,10 @@
       }
       & #Green {
         background-color: green;
-        border-bottom-right-radius: 10px;
+        border-bottom-right-radius: 5px;
       }
     }
 }
-
-
-
 
 
 #color-name {
@@ -72,24 +75,6 @@
 }
 
 
-
 .show-menu {
   transform: translateY(95px);
 }
-
-.red-background {
-  background-color: red;
-}
-
-.orange-background {
-  background-color: orange;
-}
-
-.purple-background {
-  background-color: purple;
-}
-
-.green-background {
-  background-color: green;
-}
-
