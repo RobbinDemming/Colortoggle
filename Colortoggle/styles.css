@@ -41,25 +41,28 @@
   font-size: 1.3em;
 }
 .main-nav__ul li span:hover {
-  text-decoration: underline;
   cursor: pointer;
+}
+.main-nav__ul li span:active {
+  font-size: 0.9em;
 }
 .main-nav__ul input {
   margin-right: 10px;
+  cursor: pointer;
 }
-.main-nav__ul #Home {
+.main-nav__ul #li-home {
   background-color: lightgray;
 }
-.main-nav__ul #Red {
+.main-nav__ul #li-red {
   background-color: red;
 }
-.main-nav__ul #Orange {
+.main-nav__ul #li-orange {
   background-color: orange;
 }
-.main-nav__ul #Purple {
+.main-nav__ul #li-purple {
   background-color: purple;
 }
-.main-nav__ul #Green {
+.main-nav__ul #li-green {
   background-color: green;
   border-bottom-right-radius: 5px;
 }

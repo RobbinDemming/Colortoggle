@@ -5,7 +5,7 @@ const body = document.body;
 const colorName = document.getElementById("color-name");
 const getNavSpan = document.querySelectorAll("span");
 const getNavInput = document.querySelectorAll("input");
-const homeLi = document.getElementById("Home");
+const homeLi = document.getElementById("li-home");
 
 // HIERONDER STAAT EEN FUNTIE VOOR HET TOGGELEN VAN HET MENU ALS JE OP HET HAMBURGER ICOON KLIKT.
 
@@ -27,16 +27,16 @@ document.addEventListener("click", (e) => {
 getNavSpan.forEach(span => {
     span.addEventListener("click", () => {
         getNavUl.classList.remove("show-menu");
-        colorName.innerHTML = span.parentElement.parentElement.id;
-        body.style.backgroundColor = span.parentElement.parentElement.id;
+        colorName.innerHTML = span.id;
+        body.style.backgroundColor = span.id;
     });
 });
 
 getNavInput.forEach(input => {
     input.addEventListener("click", () => {
         getNavUl.classList.remove("show-menu");
-        colorName.innerHTML = input.parentElement.parentElement.id;
-        body.style.backgroundColor = input.parentElement.parentElement.id;
+        colorName.innerHTML = input.nextSibling.id;
+        body.style.backgroundColor = input.nextSibling.id;
 
     });
 });

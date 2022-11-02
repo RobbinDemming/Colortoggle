@@ -38,27 +38,30 @@
         align-items: center;
         font-size: 1.3em;
         & span:hover {
-          text-decoration: underline;
           cursor: pointer;
         }
+        & span:active {
+          font-size: 0.9em;
         }
+      }
       
       & input {
         margin-right: 10px;
+        cursor: pointer;
       }
-      & #Home {
+      & #li-home {
         background-color: lightgray;
       }
-      & #Red {
+      & #li-red {
         background-color: red;
       }
-      & #Orange {
+      & #li-orange {
         background-color: orange;
       }
-      & #Purple {
+      & #li-purple {
         background-color: purple;
       }
-      & #Green {
+      & #li-green {
         background-color: green;
         border-bottom-right-radius: 5px;
       }
